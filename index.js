@@ -1,15 +1,16 @@
 const express = require('express');
+const mongoose = require('mongoose');
+const keys = require('./config/keys');
+require('./models/User');
+require('./services/passport');
+
+mongoose.connect(keys.mongoURI);
 
 const app = express();
+require('./routes/authRoutes')(app);
 
 
-app.get('/', (req, res) => {
-	res.send({ hi: 'there erik!'});
-});
-
-
-
-//Heroku Porting with condition
+//Heroku Porting with condition for development
 const PORT = process.env.PORT || 5000;
 app.listen(PORT);
 

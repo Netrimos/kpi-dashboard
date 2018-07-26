@@ -8,11 +8,17 @@
     "npm": "5.6.0"
   },
   "scripts": {
-    "start": "node index.js "
+    "start": "node index.js ",
+    "dev": "nodemon index.js"
   },
   "author": "ErikMakes",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.16.3"
+    "express": "^4.16.3",
+    "mongoose": "^5.2.5",
+    "mysql": "github:mysqljs/mysql",
+    "passport": "^0.4.0",
+    "passport-google-oauth20": "^1.0.0",
+    "pg": "^7.4.3"
   }
 }
